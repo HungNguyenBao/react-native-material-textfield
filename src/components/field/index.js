@@ -144,6 +144,10 @@ export default class TextField extends PureComponent {
     if (error && error !== state.error) {
       return { error };
     }
+    
+    if (value && value !== state.text) {
+      return { text: value };
+    }
 
     return null;
   }
